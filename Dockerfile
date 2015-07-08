@@ -40,5 +40,4 @@ RUN \
 EXPOSE 9200 9300
 
 # Run Elasticsearch Service
-#CMD ["/etc/init.d/elasticsearch", "start"]
 CMD ["/usr/bin/supervisord"]
