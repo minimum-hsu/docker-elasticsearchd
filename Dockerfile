@@ -1,18 +1,6 @@
-FROM ubuntu:14.04.2
+FROM minimum/oracle-java:8
 
 MAINTAINER minimum@cepave.com
-
-# Install Java 8
-RUN \
-  apt-get update && \
-  apt-get install -y software-properties-common python-software-properties && \
-  add-apt-repository ppa:webupd8team/java && \
-  (echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | \
-    sudo debconf-set-selections) && \
-  apt-get update && \
-  apt-get install -y oracle-java7-installer && \
-  apt-get clean && \
-  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install Elasticsearch 1.6
 RUN \
