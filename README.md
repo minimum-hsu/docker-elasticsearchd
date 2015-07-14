@@ -10,7 +10,7 @@ $sudo docker build --force-rm=true -t elasticsearchd .
 ## Run
   
 ```
-sudo docker run -d --privileged=true -p 9200:9200 -p 9300:9300 --name elasticsearchd elasticsearchd
+$sudo docker run -d --privileged=true -p 9200:9200 -p 9300:9300 --name elasticsearchd elasticsearchd
 ```
 
 ## Check
